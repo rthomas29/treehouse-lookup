@@ -9,6 +9,6 @@ username1 has x total badge(s) and x points in JavaScript.
 username2 has x total badge(s) and x points in JavaScript.
 ```
 ## Installation: 
-Clone this repo and run in your favorite command line w/ Node. 
+Clone this repo and run in terminal/command prompt with NodeJS installed. 
   
 
