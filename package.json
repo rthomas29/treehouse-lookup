@@ -1,0 +1,24 @@
+{
+  "name": "treehouse-lookup",
+  "version": "1.0.0",
+  "description": "## Example:      node app.js JavaScript username1 username 2 Will output the number of badges username1 and username 2 have earned, as well as the points they have accumulated in the JavaScript section in Treehouse. ``` username1 has x total badge(s) and x points in JavaScript. username2 has x total badge(s) and x points in JavaScript. ``` ## Installation:  Clone this repo and run in terminal/command prompt with NodeJS installed.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rthomas29/treehouse-lookup.git"
+  },
+  "author": "Rakeem Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rthomas29/treehouse-lookup/issues"
+  },
+  "homepage": "https://github.com/rthomas29/treehouse-lookup#readme",
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
