@@ -13,10 +13,8 @@ const get = (myName) => {
         if (response.statusCode === 200) {
           try {
             const profile = JSON.parse(body);
-            const numBadges = profile.badges.length;
-            const category = process.argv[2];
-            const catPoints = profile.points[process.argv[2]];
-            printLib.print(myName, numBadges, catPoints, category);
+            const points = profile.points;
+            module.exports.points = points;
           } catch (error) {
             printLib.printErr(error);
           }

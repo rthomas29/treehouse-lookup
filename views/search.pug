@@ -1,0 +1,17 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    title Treehouse Lookup
+  body
+    .container-fluid
+      .row
+        .col-md-4.col-md-offset-4.well
+          h3.text-center Treehouse Lookup
+          form(action='/search', method="POST")
+            .form-group
+              input(type='text', placeholder='username', class="form-control", name="username")
+              button(type="submit" class="btn btn-primary") Search
