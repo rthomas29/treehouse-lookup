@@ -17,8 +17,12 @@
   },
   "homepage": "https://github.com/rthomas29/treehouse-lookup#readme",
   "devDependencies": {
+    "body-parser": "^1.18.0",
     "eslint": "^3.16.1",
     "eslint-config-airbnb-base": "^11.1.0",
     "eslint-plugin-import": "^2.2.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
   }
 }
