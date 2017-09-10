@@ -5,6 +5,7 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel="stylesheet", href="/css/app.css")
     title Treehouse Lookup
   body
     .container-fluid
@@ -15,3 +16,7 @@ html(lang='en')
             .form-group
               input(type='text', placeholder='username', class="form-control", name="username")
               button(type="submit" class="btn btn-primary") Search
+          .profile
+            ul
+              each value, index in points
+                li= `${index}: ${value}`

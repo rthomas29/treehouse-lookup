@@ -13,8 +13,6 @@ router.get('/', (req, res) => {
 
 router.post('/search', (req, res) => {
   const username = req.body.username;
-  const userProfile = profile.get(username);
-  console.log(userProfile.points);
-  res.redirect('/');
+  profile.get(username, req, res);
 });
 module.exports = router;
