@@ -1,6 +1,7 @@
 # treehouse-lookup
 ### Simple command-line application to retrieve info from Treehouse user profile.
 
+## v0
 ## Example: 
     node app.js JavaScript username1 username 2
 Will output the number of badges username1 and username 2 have earned, as well as the points they have accumulated in the JavaScript section in Treehouse.
@@ -8,7 +9,7 @@ Will output the number of badges username1 and username 2 have earned, as well a
 username1 has x total badge(s) and x points in JavaScript.
 username2 has x total badge(s) and x points in JavaScript.
 ```
-## Installation: 
-Clone this repo and run in terminal/command prompt with NodeJS installed. 
+## v1
+Working on adding a UI (Pug)
   
 
