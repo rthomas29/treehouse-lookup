@@ -1,3 +1,11 @@
 .list {
   list-style-type: lower-greek;
 }
+
+.button {
+  margin-top: 10px;
+}
+
+.error {
+  text-align: center;
+}

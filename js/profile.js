@@ -15,12 +15,12 @@ module.exports = {
             try {
               const profile = JSON.parse(body);
               const points = profile.points;
-              res.render('data', { points });
+              res.render('data', { points, myName });
             } catch (error) {
               printLib.printErr(error);
             }
           } else {
-            res.send(`Status Code: ${response.statusCode} ${response.statusMessage}`);
+            res.render('error', { response });
           }
         });
       });

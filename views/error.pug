@@ -1,0 +1,9 @@
+doctype html
+html
+  include head.pug
+  title Oops!
+  body
+    .error
+      h3 #{ response.statusCode }: #{ response.statusMessage }
+      p Looks like that user doesn't exist. Let's 
+        a(href="/") try again.
