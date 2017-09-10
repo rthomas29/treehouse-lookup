@@ -1,0 +1,9 @@
+doctype html
+include head.pug
+h3.text-center Category Points
+.container-fluid
+  .points
+    ul.list
+      each val, index in points
+        li= `${index}: ${val}`
+    a(href="/").btn.btn-warning Search Again

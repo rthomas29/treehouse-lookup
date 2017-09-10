@@ -15,7 +15,7 @@ module.exports = {
             try {
               const profile = JSON.parse(body);
               const points = profile.points;
-              res.render('search', { points });
+              res.render('data', { points });
             } catch (error) {
               printLib.printErr(error);
             }
