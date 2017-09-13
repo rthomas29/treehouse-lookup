@@ -1,11 +1,13 @@
-.list {
-  list-style-type: lower-greek;
+div#search {
+  margin-top: 140px;
 }
 
 .button {
   margin-top: 10px;
 }
 
-.error {
-  text-align: center;
+.pointsDiv {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
