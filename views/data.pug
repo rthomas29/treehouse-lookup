@@ -1,9 +1,18 @@
 doctype html
 include head.pug
-h3.text-center #{ myName }'s Category Points
-.container-fluid
-  .points
-    ul.list
-      each val, index in points
-        li= `${index}: ${val}`
-    a(href="/").btn.btn-warning Search Again
+body
+  .container-fluid
+    h3.text-center #{ myName }'s Category Points
+    img(src=imageSrc)
+    .pointsDiv.text-center
+      table.table.table-condensed.table-bordered
+        tbody
+          tr
+            th.text-center Category
+            th.text-center Points
+          each val, index in points
+            tr
+              td= `${index}`
+              td= `${val}`
+    .search.text-center
+      a(href="/").btn.btn-warning Search Again

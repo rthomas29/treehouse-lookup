@@ -3,7 +3,7 @@ html
   include head.pug
   title Oops!
   body
-    .error
+    .error.text-center
       h3 #{ response.statusCode }: #{ response.statusMessage }
-      p Looks like that user doesn't exist. Let's 
+      p Looks like that user doesn't exist. Let's
         a(href="/") try again.
