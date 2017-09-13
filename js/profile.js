@@ -15,7 +15,8 @@ module.exports = {
             try {
               const profile = JSON.parse(body);
               const points = profile.points;
-              res.render('data', { points, myName });
+              const imageSrc = profile.gravatar_url;
+              res.render('data', { points, myName, imageSrc });
             } catch (error) {
               printLib.printErr(error);
             }
