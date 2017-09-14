@@ -22,4 +22,5 @@ div.badge > small {
 div.badge > img {
   max-height: 100px;
   max-width: 100px;
+  display: inline;
 }
