@@ -1,9 +1,10 @@
 doctype html
 include head.pug
 body
-  .container-fluid
+  .container
     h3.text-center #{ myName }'s Category Points
-    img(src=imageSrc)
+    .profile-pic
+      img(src=imageSrc, alt="profile pic").img-responsive.img-rounded
     .pointsDiv.text-center
       table.table.table-condensed.table-bordered
         tbody
