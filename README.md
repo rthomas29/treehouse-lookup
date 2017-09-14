@@ -1,5 +1,5 @@
 # treehouse-lookup
-### Simple command-line application to retrieve info from Treehouse user profile.
+### NodeJS application to retrieve info from Treehouse API.
 
 ## v 1.0.0
 ## Example:
