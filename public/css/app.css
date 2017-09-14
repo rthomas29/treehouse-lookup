@@ -11,5 +11,15 @@ div.profile-pic {
 }
 div.pointsDiv {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 auto 45px;
+}
+div.badge {
+  margin: 0 5px 45px 5px;
+}
+div.badge > small {
+  padding: 0 5px;
+}
+div.badge > img {
+  max-height: 100px;
+  max-width: 100px;
 }
