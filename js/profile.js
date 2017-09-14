@@ -16,10 +16,11 @@ module.exports = {
               const profile = JSON.parse(body);
               const points = profile.points;
               let imageSrc = 'https://achievement-images.teamtreehouse.com/treehouse.png';
+              const badges = profile.badges;
               if (profile.gravatar_url) {
                 imageSrc = profile.gravatar_url;
               }
-              res.render('data', { points, myName, imageSrc });
+              res.render('data', { points, myName, imageSrc, badges });
             } catch (error) {
               printLib.printErr(error);
             }
