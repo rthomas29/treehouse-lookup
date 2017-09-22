@@ -10,7 +10,7 @@ username1 has x total badge(s) and x points in JavaScript.
 username2 has x total badge(s) and x points in JavaScript.
 ```
 ## v 1.1.0
-### Status
+### Current Status
 Continuing to work on UI implementation (Pug).
 
 TODO's:
