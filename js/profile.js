@@ -15,10 +15,15 @@ module.exports = {
             try {
               const profile = JSON.parse(body);
               const points = profile.points;
-              let imageSrc = 'https://achievement-images.teamtreehouse.com/treehouse.png';
               const badges = profile.badges;
+              let imageSrc = 'https://achievement-images.teamtreehouse.com/treehouse.png';
               if (profile.gravatar_url) {
                 imageSrc = profile.gravatar_url;
+              }
+              for (const key in points) {
+                if (points[key] === 0) {
+                  delete points[key];
+                }
               }
               res.render('data', { points, myName, imageSrc, badges });
             } catch (error) {

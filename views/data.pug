@@ -1,6 +1,7 @@
 doctype html
 include head.pug
 body
+  //- .hide
   .container-fluid
     h3.text-center #{ myName }'s Category Points
     .profile-pic
@@ -15,12 +16,14 @@ body
             tr
               td= `${index}`
               td= `${val}`
-  .badges
+  .badges-container.container
     h3.text-center Badges
     .row
       each badge in badges
-        .badge.col-md-2
+        .badge.col-md-3.col-md-offset-4
           img(src=badge.icon_url).img-responsive
           small #{ badge.name }
     .search.text-center
       a(href="/").btn.btn-warning Search Again
+  include footer.pug
+  script(src="/js/view.js")

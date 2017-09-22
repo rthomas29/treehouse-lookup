@@ -1,3 +1,14 @@
+body {
+  background-color: #d2d7d3;
+}
+
+/* .hide {
+  display: none;
+} */
+
+.show {
+  display: block;
+}
 div#search {
   margin-top: 140px;
 }
@@ -13,11 +24,15 @@ div.pointsDiv {
   max-width: 400px;
   margin: 0 auto 45px;
 }
+div.badges-containter {
+  max-width: 80%;
+  margin: 10px auto;
+}
 div.badge {
   margin: 0 5px 45px 5px;
 }
 div.badge > small {
-  padding: 0 5px;
+  padding: 0 10px;
 }
 div.badge > img {
   max-height: 100px;
