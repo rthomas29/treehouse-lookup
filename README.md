@@ -1,4 +1,4 @@
-# treehouse-lookup
+# [treehouse-lookup](https://treehouse-lookup.herokuapp.com/)
 ### NodeJS application to retrieve info from Treehouse API.
 
 ## v 1.0.0
