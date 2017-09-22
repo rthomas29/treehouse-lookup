@@ -18,6 +18,9 @@
     "url": "https://github.com/rthomas29/treehouse-lookup/issues"
   },
   "homepage": "https://github.com/rthomas29/treehouse-lookup#readme",
+  "engines": {
+    "node": "6.9.4"
+  },
   "devDependencies": {
     "body-parser": "^1.18.0",
     "eslint": "^3.16.1",
