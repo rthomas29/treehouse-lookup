@@ -19,7 +19,7 @@ body
     h3.text-center Badges
     .row
       each badge in badges
-        figure.figure.col-sm-3
+        figure.figure.col-4.col-sm-3
           img(src=badge.icon_url, alt="treehouse badge icon").figure-img.img-fluid.rounded
           figcaption.figure-caption.text-center #{ badge.name }
     .search.text-center
