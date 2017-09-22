@@ -15,7 +15,8 @@ Continuing to work on UI implementation (Pug).
 
 TODO's:
 * ~~Tweak CSS to improve page layout and appearance.~~
-* Remove categories where the user has no points from the table.
-* Add "Date Earned" within each badge image div.
+* ~~Remove categories where the user has no points from the table.~~
+* Get rid of empty categories more efficiently.
+* Start to implement UI with React.
 
 
