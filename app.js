@@ -2,7 +2,7 @@ const express = require('express')
 const routes = require('./js/routes')
 
 const app = express()
-const port = process.env.port || 5000
+const port = process.env.PORT || 5000
 
 app.use('/', routes)
 app.use(express.static('public'))
