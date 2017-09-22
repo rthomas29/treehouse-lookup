@@ -2,12 +2,12 @@ doctype html
 include head.pug
 body
   //- .hide
-  .container-fluid
+  .container
     h3.text-center #{ myName }'s Category Points
     .profile-pic
-      img(src=imageSrc, alt="profile pic").img-responsive.img-rounded
+      img(src=imageSrc, alt="rakeem profile pic").img-fluid.rounded
     .pointsDiv.text-center
-      table.table.table-condensed.table-bordered
+      table.table.table-inverse.table-bordered.table-hover
         tbody
           tr
             th.text-center Category
@@ -16,13 +16,12 @@ body
             tr
               td= `${index}`
               td= `${val}`
-  .badges-container.container
     h3.text-center Badges
     .row
       each badge in badges
-        .badge.col-md-3.col-md-offset-4
-          img(src=badge.icon_url).img-responsive
-          small #{ badge.name }
+        figure.figure.col-sm-3
+          img(src=badge.icon_url, alt="treehouse badge icon").figure-img.img-fluid.rounded
+          figcaption.figure-caption.text-center #{ badge.name }
     .search.text-center
       a(href="/").btn.btn-warning Search Again
   include footer.pug
