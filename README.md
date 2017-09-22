@@ -14,7 +14,7 @@ username2 has x total badge(s) and x points in JavaScript.
 Continuing to work on UI implementation (Pug).
 
 TODO's:
-* Tweak CSS to improve page layout and appearance.
+* ~~Tweak CSS to improve page layout and appearance.~~
 * Remove categories where the user has no points from the table.
 * Add "Date Earned" within each badge image div.
 
