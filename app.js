@@ -8,6 +8,6 @@ app.use('/', routes)
 app.use(express.static('public'))
 app.set('view engine', 'pug')
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log('up and running')
 })
