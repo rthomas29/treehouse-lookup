@@ -26,10 +26,9 @@ class App extends Component {
           userBadges: response.data.badges,
           profilePhotoUrl: response.data.gravatar_url,
         });
-        console.log(this.state.userBadges);
       })
       .catch(error => {
-        console.log(error);
+        throw error;
       });
     this.setState({
       inputValue: '',

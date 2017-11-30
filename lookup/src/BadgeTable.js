@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 class BadgeTable extends Component {
   render() {
@@ -7,7 +8,7 @@ class BadgeTable extends Component {
         <div key={badgeObj.id}>
           <img src={badgeObj.icon_url} alt={badgeObj.name} />
           <small>
-            {badgeObj.name} | Earned on: {badgeObj.earned_date}
+            {badgeObj.name} | Earned {moment(badgeObj.earned_date).format('dddd, MMMM Do YYYY')}
           </small>
         </div>
       );
