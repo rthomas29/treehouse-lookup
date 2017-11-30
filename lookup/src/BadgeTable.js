@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 
 class BadgeTable extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const badges = this.props.badges.map((badgeObj, i) => {
-      return <div key={badgeObj.id}>{badgeObj.name}</div>;
+      return (
+        <div key={badgeObj.id}>
+          <img src={badgeObj.icon_url} alt={badgeObj.name} />
+          <small>
+            {badgeObj.name} | Earned on: {badgeObj.earned_date}
+          </small>
+        </div>
+      );
     });
     return <div>{badges}</div>;
   }
