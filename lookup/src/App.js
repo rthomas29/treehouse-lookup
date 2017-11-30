@@ -15,11 +15,12 @@ class App extends Component {
   };
   userSearchHandler = event => {
     event.preventDefault();
-
     axios
       .get(`https://teamtreehouse.com/${this.state.inputValue}.json`)
       .then(response => {
-        console.log(response.data);
+        this.setState({
+          userRecord: response.data,
+        });
       })
       .catch(error => {
         console.log(error);
