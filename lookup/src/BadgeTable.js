@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 
 class BadgeTable extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
-    return <div>{JSON.stringify(this.props.badges)}</div>;
+    const badges = this.props.badges.map((badgeObj, i) => {
+      return <div key={badgeObj.id}>{badgeObj.name}</div>;
+    });
+    return <div>{badges}</div>;
   }
 }
 

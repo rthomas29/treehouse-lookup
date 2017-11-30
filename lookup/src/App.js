@@ -7,11 +7,11 @@ import './App.css';
 class App extends Component {
   state = {
     inputValue: '',
+    userBadges: [],
   };
   onChangeHandler = event => {
     this.setState({
       inputValue: event.target.value,
-      userBadges: [],
     });
   };
   userSearchHandler = event => {
@@ -22,6 +22,7 @@ class App extends Component {
         this.setState({
           userBadges: response.data.badges,
         });
+        console.log(this.state.userBadges);
       })
       .catch(error => {
         console.log(error);
