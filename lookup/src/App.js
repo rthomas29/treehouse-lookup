@@ -10,6 +10,7 @@ class App extends Component {
     userBadges: [],
     profilePhotoUrl: '',
   };
+  hasProfileData = false;
   onChangeHandler = event => {
     this.setState({
       inputValue: event.target.value,
@@ -20,6 +21,7 @@ class App extends Component {
     axios
       .get(`https://teamtreehouse.com/${this.state.inputValue}.json`)
       .then(response => {
+        this.hasProfileData = true;
         this.setState({
           userBadges: response.data.badges,
           profilePhotoUrl: response.data.gravatar_url,
@@ -31,11 +33,19 @@ class App extends Component {
       });
   };
   render() {
+    if (this.hasProfileData === true) {
+      return (
+        <div className="App">
+          <h1>Treehouse Lookup</h1>
+          <Input change={this.onChangeHandler} submit={this.userSearchHandler} name={this.state.inputValue} />
+          <BadgeTable badges={this.state.userBadges} photo={this.state.profilePhotoUrl} />
+        </div>
+      );
+    }
     return (
       <div className="App">
         <h1>Treehouse Lookup</h1>
         <Input change={this.onChangeHandler} submit={this.userSearchHandler} name={this.state.inputValue} />
-        <BadgeTable badges={this.state.userBadges} photo={this.state.profilePhotoUrl} />
       </div>
     );
   }
