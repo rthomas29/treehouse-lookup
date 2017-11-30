@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from './Input';
+import BadgeTable from './BadgeTable';
 import axios from 'axios';
 import './App.css';
 
@@ -10,7 +11,7 @@ class App extends Component {
   onChangeHandler = event => {
     this.setState({
       inputValue: event.target.value,
-      userRecord: {},
+      userBadges: [],
     });
   };
   userSearchHandler = event => {
@@ -19,7 +20,7 @@ class App extends Component {
       .get(`https://teamtreehouse.com/${this.state.inputValue}.json`)
       .then(response => {
         this.setState({
-          userRecord: response.data,
+          userBadges: response.data.badges,
         });
       })
       .catch(error => {
@@ -31,6 +32,7 @@ class App extends Component {
       <div className="App">
         <h1>Treehouse Lookup</h1>
         <Input change={this.onChangeHandler} submit={this.userSearchHandler} name={this.state.inputValue} />
+        <BadgeTable badges={this.state.userBadges} />
       </div>
     );
   }
