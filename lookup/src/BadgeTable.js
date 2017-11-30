@@ -3,10 +3,12 @@ import moment from 'moment';
 
 class BadgeTable extends Component {
   render() {
-    const badges = this.props.badges.map((badgeObj, i) => {
+    const badges = this.props.badges.map(badgeObj => {
       return (
         <div key={badgeObj.id}>
-          <img src={badgeObj.icon_url} alt={badgeObj.name} />
+          <a href={badgeObj.url}>
+            <img src={badgeObj.icon_url} alt={badgeObj.name} />
+          </a>
           <small>
             {badgeObj.name} | Earned {moment(badgeObj.earned_date).format('dddd, MMMM Do YYYY')}
           </small>
