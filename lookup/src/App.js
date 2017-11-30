@@ -8,6 +8,7 @@ class App extends Component {
   state = {
     inputValue: '',
     userBadges: [],
+    profilePhotoUrl: '',
   };
   onChangeHandler = event => {
     this.setState({
@@ -21,6 +22,7 @@ class App extends Component {
       .then(response => {
         this.setState({
           userBadges: response.data.badges,
+          profilePhotoUrl: response.data.gravatar_url,
         });
         console.log(this.state.userBadges);
       })
@@ -33,7 +35,7 @@ class App extends Component {
       <div className="App">
         <h1>Treehouse Lookup</h1>
         <Input change={this.onChangeHandler} submit={this.userSearchHandler} name={this.state.inputValue} />
-        <BadgeTable badges={this.state.userBadges} />
+        <BadgeTable badges={this.state.userBadges} photo={this.state.profilePhotoUrl} />
       </div>
     );
   }

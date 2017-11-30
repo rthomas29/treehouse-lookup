@@ -12,7 +12,12 @@ class BadgeTable extends Component {
         </div>
       );
     });
-    return <div>{badges}</div>;
+    return (
+      <div>
+        <img src={this.props.photo} alt="profile picture" />
+        {badges}
+      </div>
+    );
   }
 }
 
