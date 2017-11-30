@@ -1,9 +1,0 @@
-doctype html
-html
-  include head.pug
-  title Oops!
-  body
-    .error.text-center
-      h3 #{ response.statusCode }: #{ response.statusMessage }
-      p Looks like that user doesn't exist.
-      a(href="/", class="btn btn-primary") Try Again.
