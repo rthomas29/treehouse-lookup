@@ -39,7 +39,7 @@ class App extends Component {
   render() {
     if (this.hasProfileData === true) {
       return (
-        <div className="App">
+        <div className="App container">
           <h1>Treehouse Lookup</h1>
           <Input change={this.onChangeHandler} submit={this.userSearchHandler} name={this.state.inputValue} />
           <BadgeTable badges={this.state.userBadges} photo={this.state.profilePhotoUrl} name={this.state.fullName} />
@@ -47,7 +47,7 @@ class App extends Component {
       );
     }
     return (
-      <div className="App">
+      <div className="App container">
         <h1>Treehouse Lookup</h1>
         <Input change={this.onChangeHandler} submit={this.userSearchHandler} name={this.state.inputValue} />
       </div>

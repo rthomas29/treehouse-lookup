@@ -5,13 +5,12 @@ class BadgeTable extends Component {
   render() {
     const badges = this.props.badges.map(badgeObj => {
       return (
-        <div key={badgeObj.id}>
+        <div key={badgeObj.id} className="badges col-sm-3">
           <a href={badgeObj.url}>
-            <img src={badgeObj.icon_url} alt={badgeObj.name} />
+            <img src={badgeObj.icon_url} alt={badgeObj.name} className="img-fluid rounded" />
           </a>
-          <small>
-            {badgeObj.name} | Earned {moment(badgeObj.earned_date).format('dddd, MMMM Do YYYY')}
-          </small>
+          <p>{badgeObj.name}</p>
+          <small>{moment(badgeObj.earned_date).format('dddd, MMMM Do YYYY')}</small>
         </div>
       );
     });
@@ -20,7 +19,7 @@ class BadgeTable extends Component {
         <h3>{this.props.name}</h3>
         <img src={this.props.photo} alt="profile" />
         <p>{this.props.badges.length} total badges</p>
-        {badges}
+        <div className="row">{badges}</div>
       </div>
     );
   }
