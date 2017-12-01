@@ -4,6 +4,9 @@ import BadgeTable from './BadgeTable';
 import axios from 'axios';
 import './App.css';
 
+// TODO: add detail paragraph under profile pic
+// have badge gallery and point details
+// maybe have a chart that displays user points (line graph)
 class App extends Component {
   state = {
     inputValue: '',
@@ -40,7 +43,6 @@ class App extends Component {
     if (this.hasProfileData === true) {
       return (
         <div className="App container">
-          <h1>Treehouse Lookup</h1>
           <Input change={this.onChangeHandler} submit={this.userSearchHandler} name={this.state.inputValue} />
           <BadgeTable badges={this.state.userBadges} photo={this.state.profilePhotoUrl} name={this.state.fullName} />
         </div>
@@ -48,7 +50,6 @@ class App extends Component {
     }
     return (
       <div className="App container">
-        <h1>Treehouse Lookup</h1>
         <Input change={this.onChangeHandler} submit={this.userSearchHandler} name={this.state.inputValue} />
       </div>
     );

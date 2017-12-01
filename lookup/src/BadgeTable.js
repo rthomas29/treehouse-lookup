@@ -7,7 +7,7 @@ class BadgeTable extends Component {
       return (
         <div key={badgeObj.id} className="badges col-sm-3">
           <a href={badgeObj.url}>
-            <img src={badgeObj.icon_url} alt={badgeObj.name} className="img-fluid rounded" />
+            <img src={badgeObj.icon_url} alt={badgeObj.name} className="img-fluid rounded-circle" />
           </a>
           <p>{badgeObj.name}</p>
           <small>{moment(badgeObj.earned_date).format('dddd, MMMM Do YYYY')}</small>
@@ -15,11 +15,13 @@ class BadgeTable extends Component {
       );
     });
     return (
-      <div>
-        <h3>{this.props.name}</h3>
-        <img src={this.props.photo} alt="profile" />
-        <p>{this.props.badges.length} total badges</p>
-        <div className="row">{badges}</div>
+      <div id="main">
+        <div id="user-info">
+          <h3>{this.props.name}</h3>
+          <img src={this.props.photo} alt="profile" className="img-fluid img-thumbnail" />
+          <p>{this.props.badges.length} total badges</p>
+        </div>
+        <div id="badge-div">{badges}</div>
       </div>
     );
   }
