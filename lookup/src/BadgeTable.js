@@ -17,7 +17,9 @@ class BadgeTable extends Component {
     });
     return (
       <div>
+        <h3>{this.props.name}</h3>
         <img src={this.props.photo} alt="profile" />
+        <p>{this.props.badges.length} total badges</p>
         {badges}
       </div>
     );

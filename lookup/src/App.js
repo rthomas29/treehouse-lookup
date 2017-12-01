@@ -9,6 +9,7 @@ class App extends Component {
     inputValue: '',
     userBadges: [],
     profilePhotoUrl: '',
+    fullName: '',
   };
   hasProfileData = false;
   onChangeHandler = event => {
@@ -25,6 +26,7 @@ class App extends Component {
         this.setState({
           userBadges: response.data.badges,
           profilePhotoUrl: response.data.gravatar_url,
+          fullName: response.data.name,
         });
       })
       .catch(error => {
@@ -40,7 +42,7 @@ class App extends Component {
         <div className="App">
           <h1>Treehouse Lookup</h1>
           <Input change={this.onChangeHandler} submit={this.userSearchHandler} name={this.state.inputValue} />
-          <BadgeTable badges={this.state.userBadges} photo={this.state.profilePhotoUrl} />
+          <BadgeTable badges={this.state.userBadges} photo={this.state.profilePhotoUrl} name={this.state.fullName} />
         </div>
       );
     }
