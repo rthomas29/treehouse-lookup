@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 
+// TODO: only capture course names one time in an array
+// then, need to assign badges to each course...
 class CourseList extends Component {
   render() {
-    const courses = this.props.badges.map((badgeObj, i) => {
+    let courseTitles = [];
+    const titles = this.props.badges.map((badgeObj, i) => {
       if (i > 0) {
-        return <li key={badgeObj.id}>{badgeObj.courses[0].title}</li>;
+        const courseName = badgeObj.courses[0].title;
+        if (courseTitles.indexOf(courseName) === -1) {
+          courseTitles.push(courseName);
+        }
+        return courseTitles;
       }
     });
-    return <ul>{courses}</ul>;
+    const courseNames = courseTitles.map(title => {
+      return <li>{title}</li>;
+    });
+    return <ul>{courseNames}</ul>;
   }
 }
 
