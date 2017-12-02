@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Input from './Input';
 import BadgeTable from './BadgeTable';
+import CourseList from './CourseList';
 import axios from 'axios';
 import './App.css';
 
@@ -45,6 +46,7 @@ class App extends Component {
         <div className="App container">
           <Input change={this.onChangeHandler} submit={this.userSearchHandler} name={this.state.inputValue} />
           <BadgeTable badges={this.state.userBadges} photo={this.state.profilePhotoUrl} name={this.state.fullName} />
+          <CourseList badges={this.state.userBadges} />
         </div>
       );
     }
