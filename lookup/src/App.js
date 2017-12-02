@@ -44,7 +44,7 @@ class App extends Component {
     if (this.hasProfileData === true) {
       return (
         <div className="App container">
-          <Input change={this.onChangeHandler} submit={this.userSearchHandler} name={this.state.inputValue} />
+          <Input change={this.onChangeHandler.bind(this)} submit={this.userSearchHandler.bind(this)} name={this.state.inputValue} />
           <BadgeTable badges={this.state.userBadges} photo={this.state.profilePhotoUrl} name={this.state.fullName} />
           <CourseList badges={this.state.userBadges} />
         </div>
