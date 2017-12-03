@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ProfileData from './ProfileData';
+import './CourseList.css';
 
 // TODO: only capture course names one time in an array - done
 //       need to handle error if username doesn't exist
@@ -17,9 +19,18 @@ class CourseList extends Component {
       }
     });
     const courseNames = courseTitles.map(title => {
-      return <li key={title}>{title}</li>;
+      return (
+        <li key={title} className="text-left">
+          {title}
+        </li>
+      );
     });
-    return <ul>{courseNames}</ul>;
+    return (
+      <div id="course-list" className="w-50 p-3 float-right">
+        <h5 className="text-center">Courses Completed</h5>
+        <ul className="course-list">{courseNames}</ul>
+      </div>
+    );
   }
 }
 

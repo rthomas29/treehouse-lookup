@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import './Input.css';
 
 class Input extends Component {
   render() {
     return (
-      <div>
+      <div id="search-div" className="w-50 p-3 float-left">
+        <h5>Treehouse Lookup</h5>
         <form onSubmit={this.props.submit}>
           <input
             type="text"
