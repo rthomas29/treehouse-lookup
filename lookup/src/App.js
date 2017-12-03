@@ -14,6 +14,7 @@ class App extends Component {
     userBadges: [],
     profilePhotoUrl: '',
     fullName: '',
+    errorMsg: '',
   };
   hasProfileData = false;
   onChangeHandler = event => {
@@ -34,7 +35,10 @@ class App extends Component {
         });
       })
       .catch(error => {
-        throw error;
+        if (error) {
+          this.hasProfileData = false;
+          this.setState({ errorMsg: error.message });
+        }
       });
     this.setState({
       inputValue: '',
@@ -44,9 +48,20 @@ class App extends Component {
     if (this.hasProfileData === true) {
       return (
         <div className="App container">
-          <Input change={this.onChangeHandler.bind(this)} submit={this.userSearchHandler.bind(this)} name={this.state.inputValue} />
+          <Input
+            change={this.onChangeHandler.bind(this)}
+            submit={this.userSearchHandler.bind(this)}
+            name={this.state.inputValue}
+          />
           <BadgeTable badges={this.state.userBadges} photo={this.state.profilePhotoUrl} name={this.state.fullName} />
           <CourseList badges={this.state.userBadges} />
+        </div>
+      );
+    } else if (this.hasProfileData === false && this.state.errorMsg) {
+      return (
+        <div className="App container">
+          <h4>Looks like we have an error: {this.state.errorMsg}. Try again.</h4>
+          <Input change={this.onChangeHandler} submit={this.userSearchHandler} name={this.state.inputValue} />
         </div>
       );
     }

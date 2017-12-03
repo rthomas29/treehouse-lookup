@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 
-// TODO: only capture course names one time in an array
+// TODO: only capture course names one time in an array - done
+//       need to handle error if username doesn't exist
 // then, need to assign badges to each course...
 class CourseList extends Component {
   render() {
     const courseTitles = [];
     this.props.badges.map((badgeObj, i) => {
       if (i > 0) {
-        const badgeKey = badgeObj.id;
-        const courseName = badgeObj.courses[0].title;
+        let badgeKey = badgeObj.id;
+        let courseName = badgeObj.courses[0].title;
         if (courseTitles.indexOf(courseName) === -1) {
           courseTitles.push(courseName);
         }
