@@ -1,0 +1,9 @@
+#course-list {
+  max-width: 300px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.course-list {
+  list-style: none;
+}
