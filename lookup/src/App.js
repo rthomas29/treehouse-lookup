@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Input from './Input';
 import BadgeTable from './BadgeTable';
 import CourseList from './CourseList';
+import ProfileData from './ProfileData';
 import axios from 'axios';
 import './App.css';
 
@@ -53,14 +54,14 @@ class App extends Component {
             submit={this.userSearchHandler.bind(this)}
             name={this.state.inputValue}
           />
-          <BadgeTable badges={this.state.userBadges} photo={this.state.profilePhotoUrl} name={this.state.fullName} />
+          <ProfileData badges={this.state.userBadges} photo={this.state.profilePhotoUrl} name={this.state.fullName} />
           <CourseList badges={this.state.userBadges} />
         </div>
       );
     } else if (this.hasProfileData === false && this.state.errorMsg) {
       return (
         <div className="App container">
-          <h4>Looks like we have an error: {this.state.errorMsg}. Try again.</h4>
+          <h4>{this.state.errorMsg}. That user probably doesn't exist. Try again.</h4>
           <Input change={this.onChangeHandler} submit={this.userSearchHandler} name={this.state.inputValue} />
         </div>
       );

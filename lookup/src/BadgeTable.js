@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ProfileData.css';
 import moment from 'moment';
 
 class BadgeTable extends Component {
@@ -7,7 +8,7 @@ class BadgeTable extends Component {
       return (
         <div key={badgeObj.id} className="badges col-sm-3">
           <a href={badgeObj.url}>
-            <img src={badgeObj.icon_url} alt={badgeObj.name} className="img-fluid rounded-circle" />
+            <img src={badgeObj.icon_url} alt={badgeObj.name} className="img-fluid rounded-circle profile-img" />
           </a>
           <p>{badgeObj.name}</p>
           <small>{moment(badgeObj.earned_date).format('dddd, MMMM Do YYYY')}</small>
@@ -17,7 +18,7 @@ class BadgeTable extends Component {
     return (
       <div id="main">
         <div id="user-info">
-          <h3>{this.props.name}</h3>
+          <h5>{this.props.name}</h5>
           <img src={this.props.photo} alt="profile" className="img-fluid img-thumbnail" />
           <p>{this.props.badges.length} total badges</p>
         </div>
