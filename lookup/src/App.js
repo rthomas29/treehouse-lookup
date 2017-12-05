@@ -55,6 +55,7 @@ class App extends Component {
             name={this.state.inputValue}
           />
           <ProfileData badges={this.state.userBadges} photo={this.state.profilePhotoUrl} name={this.state.fullName} />
+          <BadgeTable badges={this.state.userBadges} />
           <CourseList badges={this.state.userBadges} />
         </div>
       );

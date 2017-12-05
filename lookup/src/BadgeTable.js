@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ProfileData.css';
+import './BadgeTable.css';
 import moment from 'moment';
 
 class BadgeTable extends Component {
@@ -7,11 +7,11 @@ class BadgeTable extends Component {
     const badges = this.props.badges.map(badgeObj => {
       return (
         <div key={badgeObj.id} className="badges col-sm-3">
+          <h6>{badgeObj.name}</h6>
           <a href={badgeObj.url}>
-            <img src={badgeObj.icon_url} alt={badgeObj.name} className="img-fluid rounded-circle profile-img" />
+            <img src={badgeObj.icon_url} alt={badgeObj.name} className="img-fluid rounded-circle badge-icon" />
           </a>
-          <p>{badgeObj.name}</p>
-          <small>{moment(badgeObj.earned_date).format('dddd, MMMM Do YYYY')}</small>
+          {/* <small>{moment(badgeObj.earned_date).format('dddd, MMMM Do YYYY')}</small> */}
         </div>
       );
     });
