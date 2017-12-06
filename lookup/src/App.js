@@ -54,8 +54,8 @@ class App extends Component {
             photo={this.state.profilePhotoUrl}
             userName={this.state.userName}
           />
-          {/* <BadgeTable badges={this.state.userBadges} />
-          <CourseList badges={this.state.userBadges} /> */}
+          <CourseList badges={this.state.userBadges} />
+          {/* <BadgeTable badges={this.state.userBadges} /> */}
         </div>
       );
     } else if (this.hasProfileData === false && this.state.errorMsg) {
