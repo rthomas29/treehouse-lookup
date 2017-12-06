@@ -6,9 +6,12 @@ class CourseList extends Component {
   constructor() {
     super();
     this.handleCourseClick = this.handleCourseClick.bind(this);
+    this.state = {
+      currentTitle: '',
+    };
   }
   handleCourseClick(e) {
-    console.log(e.target.value);
+    this.setState({ currentTitle: e.target.value });
   }
   render() {
     const courseTitles = [];
@@ -16,8 +19,12 @@ class CourseList extends Component {
       if (i > 0) {
         let badgeKey = badgeObj.id;
         let courseName = badgeObj.courses[0].title;
+        const currentBadges = [];
         if (courseTitles.indexOf(courseName) === -1) {
           courseTitles.push(courseName);
+        }
+        if (courseName === this.state.currentTitle) {
+          currentBadges.push(badgeObj);
         }
         return courseTitles;
       }
