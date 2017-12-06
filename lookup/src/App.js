@@ -32,7 +32,7 @@ class App extends Component {
         this.setState({
           userBadges: response.data.badges,
           profilePhotoUrl: response.data.gravatar_url,
-          fullName: response.data.name,
+          userName: response.data.profile_name,
         });
       })
       .catch(error => {
@@ -49,14 +49,13 @@ class App extends Component {
     if (this.hasProfileData === true) {
       return (
         <div className="App container">
-          <Input
-            change={this.onChangeHandler.bind(this)}
-            submit={this.userSearchHandler.bind(this)}
-            name={this.state.inputValue}
+          <ProfileData
+            badges={this.state.userBadges}
+            photo={this.state.profilePhotoUrl}
+            userName={this.state.userName}
           />
-          <ProfileData badges={this.state.userBadges} photo={this.state.profilePhotoUrl} name={this.state.fullName} />
-          <BadgeTable badges={this.state.userBadges} />
-          <CourseList badges={this.state.userBadges} />
+          {/* <BadgeTable badges={this.state.userBadges} />
+          <CourseList badges={this.state.userBadges} /> */}
         </div>
       );
     } else if (this.hasProfileData === false && this.state.errorMsg) {

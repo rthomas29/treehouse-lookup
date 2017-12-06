@@ -3,9 +3,12 @@ import './ProfileData.css';
 
 const ProfileData = props => {
   return (
-    <div>
-      <h5>{props.name}</h5>
-      <img src={props.photo} alt="profile" className="img-fluid img-thumbnail profile-img rounded-circle" />
+    <div id="profile">
+      <p>
+        Username: {props.userName}{' '}
+        <img src={props.photo} alt="profile" className="rounded-circle float-right profile-img" />
+      </p>
+      <p>Badge Count - {props.badges.length}</p>
     </div>
   );
 };
