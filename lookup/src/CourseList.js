@@ -24,7 +24,7 @@ class CourseList extends Component {
           courseTitles.push(courseName);
         }
         if (courseName === this.state.currentTitle) {
-          currentBadges.push(badgeObj);
+          console.log(badgeObj.name);
         }
         return courseTitles;
       }
