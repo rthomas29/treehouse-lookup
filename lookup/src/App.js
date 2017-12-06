@@ -16,6 +16,7 @@ class App extends Component {
     profilePhotoUrl: '',
     fullName: '',
     errorMsg: '',
+    points: 0,
   };
   hasProfileData = false;
   onChangeHandler = event => {
@@ -33,6 +34,7 @@ class App extends Component {
           userBadges: response.data.badges,
           profilePhotoUrl: response.data.gravatar_url,
           userName: response.data.profile_name,
+          points: response.data.points,
         });
       })
       .catch(error => {
@@ -53,6 +55,7 @@ class App extends Component {
             badges={this.state.userBadges}
             photo={this.state.profilePhotoUrl}
             userName={this.state.userName}
+            points={this.state.points}
           />
           <CourseList badges={this.state.userBadges} />
           {/* <BadgeTable badges={this.state.userBadges} /> */}
