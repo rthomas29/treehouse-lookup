@@ -21,14 +21,16 @@ class CourseList extends Component {
     const courseNames = courseTitles.map(title => {
       return (
         <li key={title} className="text-left">
-          {title}
+          <button type="button" className="btn btn-success dropdown-toggle">
+            {title}
+          </button>
         </li>
       );
     });
     return (
-      <div id="course-list" className="w-50 p-3 float-right">
-        <h5 className="text-center">Courses Completed</h5>
-        <ul className="course-list">{courseNames}</ul>
+      <div id="course-list" className="float-left">
+        <h5>Courses Completed</h5>
+        <ul className="text-left">{courseNames}</ul>
       </div>
     );
   }
