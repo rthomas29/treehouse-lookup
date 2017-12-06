@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import ProfileData from './ProfileData';
 import './CourseList.css';
 
-// TODO: only capture course names one time in an array - done
-//       need to handle error if username doesn't exist
-// then, need to assign badges to each course...
 class CourseList extends Component {
+  constructor() {
+    super();
+    this.handleCourseClick = this.handleCourseClick.bind(this);
+  }
+  handleCourseClick(e) {
+    console.log(e.target.value);
+  }
   render() {
     const courseTitles = [];
     this.props.badges.map((badgeObj, i) => {
@@ -21,9 +25,12 @@ class CourseList extends Component {
     const courseNames = courseTitles.map(title => {
       return (
         <li key={title} className="text-left">
-          <button type="button" className="btn btn-success dropdown-toggle">
-            {title}
-          </button>
+          <input
+            onClick={this.handleCourseClick}
+            type="button"
+            value={title}
+            className="btn btn-success dropdown-toggle"
+          />
         </li>
       );
     });
