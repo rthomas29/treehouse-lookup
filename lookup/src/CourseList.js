@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProfileData from './ProfileData';
+import BadgeTable from './BadgeTable';
 import './CourseList.css';
 
 class CourseList extends Component {
@@ -32,12 +33,15 @@ class CourseList extends Component {
     const courseNames = courseTitles.map(title => {
       return (
         <li key={title} className="text-left">
+          <div>
+
           <input
             onClick={this.handleCourseClick}
             type="button"
             value={title}
             className="btn btn-success dropdown-toggle"
           />
+          </div>
         </li>
       );
     });
