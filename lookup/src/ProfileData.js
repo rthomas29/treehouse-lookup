@@ -3,8 +3,8 @@ import './ProfileData.css';
 
 const ProfileData = props => {
   return (
-    <div id="profile">
-      <h5>Profile</h5>
+    <div id="profile" className="container">
+      <aside>Profile</aside>
       <p>
         Username: {props.userName}{' '}
         <img src={props.photo} alt="profile" className="rounded-circle float-right profile-img" />

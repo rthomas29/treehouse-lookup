@@ -50,7 +50,7 @@ class App extends Component {
   render() {
     if (this.hasProfileData === true) {
       return (
-        <div className="App container">
+        <div className="App">
           <ProfileData
             badges={this.state.userBadges}
             photo={this.state.profilePhotoUrl}
@@ -58,7 +58,7 @@ class App extends Component {
             points={this.state.points}
           />
           <CourseList badges={this.state.userBadges} />
-          {/* <BadgeTable badges={this.state.userBadges} /> */}
+          <BadgeTable badges={this.state.userBadges} />
         </div>
       );
     } else if (this.hasProfileData === false && this.state.errorMsg) {

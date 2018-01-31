@@ -4,23 +4,22 @@ import moment from 'moment';
 
 class BadgeTable extends Component {
   render() {
-    const currentCourseBadgeList = this.props.currentBadges.map(badgeObj => {
+    const currentCourseBadgeList = this.props.badges.map(badgeObj => {
       return (
-        <li key={badgeObj.id} className="badges col-sm-3">
-          <p>
+        <div id="badge-div" key={badgeObj.id} className="badges col-2 col-sm-2 col-xs-2">
+          <figure>
             <a href={badgeObj.url}>
-              <img src={badgeObj.icon_url} alt={badgeObj.name} className="img-fluid rounded-circle badge-icon" />
-              <h6>{badgeObj.name}</h6>
-              <small>{moment(badgeObj.earned_date).format('dddd, MMMM Do YYYY')}</small>
+              <img src={badgeObj.icon_url} alt={badgeObj.name} className="badge-icon img-fluid" />
             </a>
-          </p>
-        </li>
+            <figcaption>{badgeObj.name}</figcaption>
+          </figure>
+        </div>
       );
     });
     return (
-      <ul id="main">
-        <div id="badge-div">{currentCourseBadgeList}</div>
-      </ul>
+      <section id="main" className="container">
+        <div className="row">{currentCourseBadgeList}</div>
+      </section>
     );
   }
 }
