@@ -1,1 +1,20 @@
+.lead {
+  font-size: 1.4em;
+}
 
+header {
+  margin-top: 60%;
+  font-size: 12px;
+}
+
+div.d-flex {
+  padding: 10px;
+}
+
+div.d-flex > div {
+  padding: 10px;
+}
+
+.btn {
+  margin: 10px;
+}
