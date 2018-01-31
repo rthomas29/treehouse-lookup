@@ -3,7 +3,7 @@ import './ProfileData.css';
 
 const ProfileData = props => {
   return (
-    <div id="profile" className="container">
+    <div id="profile" className="container-fluid">
       <aside>Profile</aside>
       <p>
         Username: {props.userName}{' '}
