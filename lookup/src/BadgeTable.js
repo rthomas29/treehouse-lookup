@@ -18,6 +18,7 @@ class BadgeTable extends Component {
     });
     return (
       <section id="main" className="container">
+        <h5>Badges Earned</h5>
         <div className="row">{currentCourseBadgeList}</div>
       </section>
     );
